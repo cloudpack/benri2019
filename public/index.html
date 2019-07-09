@@ -1,65 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="en-us">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>cloudpack あら便利カレンダー 2018</title>
+    <meta name="description" content="あら便利カレンダー2018">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-database.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
+    <meta name="theme-color" content="#157878">
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
+    <link href="./css/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
     </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+</head>
 
+<body>
+    <section class="page-header">
+        <h1 class="project-name">benri2018</h1>
+        <h2 class="project-tagline">あら便利カレンダー2018</h2>
+    </section>
+    <section class="main-content">
+        <h1 id="cloudpack-あら便利カレンダー-2018">cloudpack あら便利カレンダー 2018</h1>
+        <div id="app">
+            <div v-if="data.length > 0" class="contents">
+                <div class="calendar">
+                    <h1 class="month">
+                        July 2018
+                    </h1>
+                    <ol class="day-names">
+                        <li>
+                            Sunday
+                        </li>
+                        <li>
+                            Monday
+                        </li>
+                        <li>
+                            Tuesday
+                        </li>
+                        <li>
+                            Wednesday
+                        </li>
+                        <li>
+                            Thursday
+                        </li>
+                        <li>
+                            Friday
+                        </li>
+                        <li>
+                            Saturday
+                        </li>
+                    </ol>
+                    <ol class="days">
+                        <li v-for="i in prev" class="outside">
+                            <div class="date"></div>
+                        </li>
+                        <li v-for="i in days" class="cell">
+                            <div class="post">
+                                <div class="date">{{i}}</div>
+                                <template v-if="data[i-1]">
+                                    <div class="icon">
+                                        <img v-if="data[i-1].icon != ''" :src="data[i-1].icon" alt="">
+                                    </div>
+                                    <div class="title">
+                                        <a :href="data[i-1].link">{{data[i-1].title}}</a>
+                                    </div>
+                                </template>
+                            </div>
+                        </li>
+                        <li v-for="i in after" class="outside">
+                            <div class="date"></div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <span class="site-footer-owner">
+                <a href="https://github.com/cloudpack/benri2018">benri2018</a> is maintained by
+                <a href="https://github.com/cloudpack">cloudpack</a>.</span>
+        </footer>
+    </section>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+        Vue.config.silent = true;
+        Vue.config.devtools = false;
+        new Vue({
+            el: '#app',
+            data: {
+                prev: 0,
+                after: 4,
+                days: 31,
+                data: []
+            },
+            created: function () {
+                axios.get('./data.json')
+                    .then(r => {
+                        this.data = r.data;
+                    })
+            }
+        })
     </script>
-  </body>
+</body>
+
 </html>
