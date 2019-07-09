@@ -15,9 +15,9 @@
     "link": ""
   },
   {
-    "icon": "",
-    "title": "",
-    "link": ""
+    "icon": "images/choco.png",
+    "title": "AWS SDK for C++のサンプルをVisual Studio Codeでデバッグする",
+    "link": "https://qiita.com/dbgso/items/4ecb83e52e6773bb0bcd"
   },
   {
     "icon": "",
