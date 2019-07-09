@@ -33,5 +33,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: echo yarn run firebase deploy --token=$FIREBASE_TOKEN
+      # run deploy!
+      - run: yarn run firebase deploy --token=$FIREBASE_TOKEN
