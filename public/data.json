@@ -120,9 +120,9 @@
     "link": ""
   },
   {
-    "icon": "",
-    "title": "",
-    "link": ""
+    "icon": "images/choco.png",
+    "title": "Visual Studio Codeで依存モジュールの型定義を使いたい(JavascriptのNode.jsで",
+    "link": "https://qiita.com/dbgso/items/2ad42139635e45ac150d"
   },
   {
     "icon": "",
