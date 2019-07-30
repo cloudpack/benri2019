@@ -80,9 +80,19 @@
     "link": ""
   },
   {
+    "icon": "images/kai.jpg",
+    "title": "AWS CloudFormationのLambda-BackedカスタムリソースでネストされたJSONを返しても参照できない",
+    "link": "https://qiita.com/kai_kou/items/61a2b3c69ae2af4f2e40"
+  },
+  {
     "icon": "",
     "title": "",
     "link": ""
+  },
+  {
+    "icon": "images/kai.jpg",
+    "title": "AWS CloudFormationのLambda-BackedカスタムリソースでネストされてるっぽいJSONを返す方法",
+    "link": "https://qiita.com/kai_kou/items/d030117c694531410203"
   },
   {
     "icon": "",
@@ -95,19 +105,9 @@
     "link": ""
   },
   {
-    "icon": "",
-    "title": "",
-    "link": ""
-  },
-  {
-    "icon": "",
-    "title": "",
-    "link": ""
-  },
-  {
-    "icon": "",
-    "title": "",
-    "link": ""
+    "icon": "images/kai.jpg",
+    "title": "AWS CloudFormationのLambda-Backedカスタムリソースで`cfnresponse.send()` 実行時に`TypeError: Object of type datetime is not JSON serializable` エラーになった際の対応方法",
+    "link": "https://qiita.com/kai_kou/items/6393815e1aba995582b0"
   },
   {
     "icon": "images/choco.png",
@@ -115,9 +115,9 @@
     "link": "https://qiita.com/dbgso/items/736eb791149dbb0c3cf3"
   },
   {
-    "icon": "",
-    "title": "",
-    "link": ""
+    "icon": "images/kai.jpg",
+    "title": "Amazon Managed BlockchainでHyperledger Fabricのブロックチェーンネットワークをさくっと構築するAWS CloudFormationのテンプレートを作ってみた(解説編)",
+    "link": "https://qiita.com/kai_kou/items/ab51cb7d16c680f591d2"
   },
   {
     "icon": "images/choco.png",
@@ -145,9 +145,9 @@
     "link": ""
   },
   {
-    "icon": "",
-    "title": "",
-    "link": ""
+    "icon": "images/kai.jpg",
+    "title": "AWS::CloudFormation::Init タイプを使ってEC2インスタンスの環境構築ができるようにしてみた",
+    "link": "https://qiita.com/kai_kou/items/e1ef9fa6fb0375dcf15f"
   },
   {
     "icon": "",
