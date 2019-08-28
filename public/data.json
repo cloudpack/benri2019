@@ -35,9 +35,9 @@
     "link": ""
   },
   {
-    "icon": "",
-    "title": "",
-    "link": ""
+    "icon": "images/choco.png",
+    "title": "VS CodeのRemote Containersを使うときはdocker-composeのバージョンに気をつけよう",
+    "link": "https://qiita.com/dbgso/items/439d128099c211059665"
   },
   {
     "icon": "images/kai.jpg",
